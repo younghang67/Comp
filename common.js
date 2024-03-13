@@ -1,18 +1,23 @@
-let openBtn = document.querySelector(".open_btn > i");
-let closeBtn = document.querySelector(".close_btn > i");
-let nav = document.querySelector(".m_menu");
-let navMenu = document.querySelector(".m_menu > ul");
+const nav = document.querySelector(".m_menu");
+const navMenu = document.querySelector(".m_menu > ul");
+const menuItem = document.querySelectorAll(".m_menu > ul > li > a");
 
-closeBtn.addEventListener("click", () => {
+function closeMenu() {
   nav.classList.add("isOff");
-  nav.classList.remove("isOn");
   navMenu.classList.add("isOff");
+  nav.classList.remove("isOn");
   navMenu.classList.remove("isOn");
-});
-
-openBtn.addEventListener("click", () => {
+}
+function openMenu() {
   nav.classList.add("isOn");
-  nav.classList.remove("isOff");
   navMenu.classList.add("isOn");
+  nav.classList.remove("isOff");
   navMenu.classList.remove("isOff");
+}
+
+document.querySelector(".open_btn > i").addEventListener("click", openMenu);
+document.querySelector(".close_btn > i").addEventListener("click", closeMenu);
+
+menuItem.forEach((item) => {
+  item.addEventListener("click", closeMenu);
 });

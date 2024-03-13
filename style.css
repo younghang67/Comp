@@ -163,6 +163,7 @@ header {
   position: fixed;
   right: 20px;
   top: 19px;
+  z-index: 8;
 }
 .open_btn i {
   font-size: 1.7rem;
