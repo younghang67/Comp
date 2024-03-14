@@ -348,7 +348,7 @@ header {
 }
 .careers_desc::before {
   content: "";
-  background-image: url(/img/dots.png);
+  background-image: url(img/dots.png);
   background-repeat: no-repeat;
   top: 28px;
   left: -36px;
