@@ -42,16 +42,20 @@ const handleIntersect = (entries, observer) => {
         break;
       case "Service":
         if (!serviceActionExecuted && entry.isIntersecting) {
-          document.querySelectorAll("#service_grid .grid_items").forEach((element) => {
-            element.classList.add('deactive')
-          });
+          document
+            .querySelectorAll("#service_grid .grid_items")
+            .forEach((element) => {
+              element.classList.add("deactive");
+            });
           serviceActionExecuted = true;
         }
         break;
       case "Career":
         if (!careerActionExecuted && entry.isIntersecting) {
-          // Action for Career section
-          // Add your code here
+          const element = document.querySelector(".dots > .spin");
+          if (element) {
+            element.classList.add("deactive");
+          }
           careerActionExecuted = true;
         }
         break;

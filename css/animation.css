@@ -65,6 +65,14 @@
   opacity: 1;
   transform: translateX(0);
 }
+.spin.active {
+  transform: rotate(-130deg);
+  transition: 900ms ease-in-out;
+  transition-delay: 300ms;
+}
+.spin.deactive {
+  transform: rotate(45deg);
+}
 
 @media screen and (max-width: 768px) {
   .grid_items.active {
