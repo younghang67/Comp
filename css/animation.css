@@ -2,6 +2,7 @@
   transform: translateY(-100px) translateX(40px) rotate(180deg);
   opacity: 0.5;
   transition: 800ms ease-in-out;
+  transition-delay: 300ms;
 }
 .rotate.deactive {
   transform: translateY(0) translateX(0) rotate(0);
